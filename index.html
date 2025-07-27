@@ -1,487 +1,247 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Jade funky 30 - ridesharing</title>
-
     <!-- Tailwind CSS CDN -->
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Inter Font -->
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
-
         body {
-
             font-family: 'Inter', sans-serif;
-
             background-color: #f0f2f5;
-
             color: #333;
-
         }
-
         .container {
-
             max-width: 90%;
-
             margin: 2rem auto;
-
             padding: 1.5rem;
-
             background-color: #ffffff;
-
             border-radius: 1rem;
-
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-
         }
-
         input[type="text"],
-
         input[type="datetime-local"],
-
         input[type="number"],
-
         textarea {
-
             width: 100%;
-
             padding: 0.75rem;
-
             border: 1px solid #d1d5db;
-
             border-radius: 0.5rem;
-
             font-size: 1rem;
-
             transition: border-color 0.2s;
-
         }
-
         input[type="text"]:focus,
-
         input[type="datetime-local"]:focus,
-
         input[type="number"]:focus,
-
         textarea:focus {
-
             outline: none;
-
             border-color: #6366f1;
-
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-
         }
-
         button {
-
             padding: 0.75rem 1.5rem;
-
             border-radius: 0.5rem;
-
             font-weight: 600;
-
             cursor: pointer;
-
             transition: background-color 0.2s, transform 0.1s;
-
         }
-
         button:hover {
-
             transform: translateY(-1px);
-
         }
-
         .btn-primary {
-
             background-color: #6366f1;
-
             color: white;
-
         }
-
         .btn-primary:hover {
-
             background-color: #4f46e5;
-
         }
-
         .btn-secondary {
-
             background-color: #e5e7eb;
-
             color: #374151;
-
         }
-
         .btn-secondary:hover {
-
             background-color: #d1d5db;
-
         }
-
         .tab-button {
-
             padding: 0.75rem 1.5rem;
-
             border-radius: 0.5rem;
-
             font-weight: 600;
-
             cursor: pointer;
-
             background-color: #e5e7eb;
-
             color: #374151;
-
             transition: background-color 0.2s;
-
         }
-
         .tab-button.active {
-
             background-color: #6366f1;
-
             color: white;
-
         }
-
         .card {
-
             background-color: #f9fafb;
-
             border-radius: 0.75rem;
-
             padding: 1rem;
-
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-
         }
-
         .modal {
-
             display: none;
-
             position: fixed;
-
             z-index: 1000;
-
             left: 0;
-
             top: 0;
-
             width: 100%;
-
             height: 100%;
-
             overflow: auto;
-
             background-color: rgba(0,0,0,0.4);
-
             justify-content: center;
-
             align-items: center;
-
         }
-
         .modal-content {
-
             background-color: #fefefe;
-
             margin: auto;
-
             padding: 20px;
-
             border-radius: 0.75rem;
-
             width: 80%;
-
             max-width: 500px;
-
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
             position: relative;
-
         }
-
         .close-button {
-
             color: #aaa;
-
             float: right;
-
             font-size: 28px;
-
             font-weight: bold;
-
             cursor: pointer;
-
         }
-
         .close-button:hover,
-
         .close-button:focus {
-
             color: black;
-
             text-decoration: none;
-
             cursor: pointer;
-
         }
-
         .loading-spinner {
-
             border: 4px solid rgba(0, 0, 0, 0.1);
-
             border-left-color: #6366f1;
-
             border-radius: 50%;
-
             width: 24px;
-
             height: 24px;
-
             animation: spin 1s linear infinite;
-
             display: inline-block;
-
             vertical-align: middle;
-
             margin-left: 0.5rem;
-
         }
-
         @keyframes spin {
-
             0% { transform: rotate(0deg); }
-
             100% { transform: rotate(360deg); }
-
         }
-
     </style>
-
 </head>
-
 <body class="bg-gray-100 p-4 sm:p-6 lg:p-8">
-
     <div class="container">
-
         <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Jade funky 30 - ridesharing</h1>
 
-
-
         <!-- Tab Navigation -->
-
         <div class="flex justify-center mb-6 space-x-4 flex-wrap">
-
             <button id="tab-my-ride" class="tab-button active mb-2 sm:mb-0">I Need a Ride</button>
-
             <button id="tab-offer-ride" class="tab-button mb-2 sm:mb-0">Offer a Ride</button>
-
             <button id="tab-ride-board" class="tab-button">Ride Board</button>
-
         </div>
-
-
 
         <!-- I Need a Ride Tab Content -->
-
         <div id="content-my-ride" class="tab-content">
-
             <h2 class="text-2xl font-semibold mb-4 text-gray-700">I Need a Ride</h2>
-
             <form id="my-ride-form" class="space-y-4">
-
                 <div>
-
                     <label for="my-name" class="block text-sm font-medium text-gray-700 mb-1">Your Name/Nickname:</label>
-
                     <input type="text" id="my-name" name="myName" required class="block w-full">
-
                 </div>
-
                 <div>
-
                     <label for="fly-in-time" class="block text-sm font-medium text-gray-700 mb-1">Fly In Time:</label>
-
                     <input type="datetime-local" id="fly-in-time" name="flyInTime" class="block w-full">
-
                 </div>
-
                 <div>
-
                     <label for="fly-out-time" class="block text-sm font-medium text-gray-700 mb-1">Fly Out Time:</label>
-
                     <input type="datetime-local" id="fly-out-time" name="flyOutTime" class="block w-full">
-
                 </div>
-
                 <button type="submit" class="btn-primary w-full">Save My Ride Details</button>
-
             </form>
-
         </div>
-
-
 
         <!-- Offer a Ride Tab Content -->
-
         <div id="content-offer-ride" class="tab-content hidden">
-
             <h2 class="text-2xl font-semibold mb-4 text-gray-700">Offer a Ride</h2>
-
             <form id="offer-ride-form" class="space-y-4">
-
                 <div>
-
                     <label for="offer-name" class="block text-sm font-medium text-gray-700 mb-1">Your Name/Nickname:</label>
-
                     <input type="text" id="offer-name" name="offerName" required class="block w-full">
-
                 </div>
-
                 <div>
-
                     <label for="departure-time" class="block text-sm font-medium text-gray-700 mb-1">Departure Time:</label>
-
                     <input type="datetime-local" id="departure-time" name="departureTime" required class="block w-full">
-
                 </div>
-
                 <div>
-
                     <label for="departure-location" class="block text-sm font-medium text-gray-700 mb-1">Departure Location:</label>
-
                     <input type="text" id="departure-location" name="departureLocation" placeholder="e.g., Barcelona City Center" class="block w-full">
-
                 </div>
-
                 <div>
-
                     <label for="seats-available" class="block text-sm font-medium text-gray-700 mb-1">Number of Seats Available:</label>
-
                     <input type="number" id="seats-available" name="seatsAvailable" min="1" value="1" required class="block w-full">
-
                 </div>
-
                 <div>
-
                     <label for="destination" class="block text-sm font-medium text-gray-700 mb-1">Destination (e.g., Festival Site, Airport):</label>
-
                     <input type="text" id="destination" name="destination" required class="block w-full">
-
                 </div>
-
                 <div>
-
                     <label for="luggage-capacity" class="block text-sm font-medium text-gray-700 mb-1">Luggage Capacity:</label>
-
                     <input type="text" id="luggage-capacity" name="luggageCapacity" placeholder="e.g., Medium (2 large bags)" class="block w-full">
-
                 </div>
-
                 <button type="submit" class="btn-primary w-full">Offer Ride</button>
-
             </form>
-
         </div>
-
-
 
         <!-- Ride Board Tab Content -->
-
         <div id="content-ride-board" class="tab-content hidden">
-
             <h2 class="text-2xl font-semibold mb-4 text-gray-700">Ride Board</h2>
-
             <div class="mb-4 text-sm text-gray-600">
-
                 Your User ID: <span id="user-id-display" class="font-mono bg-gray-200 p-1 rounded text-xs break-all">Loading...</span>
-
             </div>
-
             <div id="ride-requests-list" class="space-y-4 mb-8">
-
                 <h3 class="text-xl font-semibold text-gray-700">People Needing Rides:</h3>
-
                 <p id="no-requests-message" class="text-gray-500">No ride requests yet.</p>
-
             </div>
-
             <div id="ride-offers-list" class="space-y-4">
-
                 <h3 class="text-xl font-semibold text-gray-700">Available Rides:</h3>
-
                 <p id="no-offers-message" class="text-gray-500">No ride offers yet.</p>
-
             </div>
-
         </div>
-
     </div>
-
-
 
     <!-- Custom Modal for Messages -->
-
     <div id="messageModal" class="modal">
-
         <div class="modal-content">
-
             <span class="close-button">&times;</span>
-
             <p id="modalMessage" class="text-lg text-gray-800"></p>
-
             <div id="modalSpinner" class="loading-spinner hidden mx-auto mt-4"></div>
-
         </div>
-
     </div>
 
-
-
     <!-- Firebase SDKs -->
-
     <script type="module">
-
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-
         import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-
         import { getFirestore, doc, setDoc, collection, query, onSnapshot, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-
-
         // Global variables for Firebase
-
         let app;
-
         let db;
-
         let auth;
-
         let userId = 'loading'; // Default loading state for userId
-
         let isAuthReady = false; // Flag to ensure auth is ready before Firestore operations
 
-
-
-        // Access __app_id and __firebase_config from the environment
-        const firebaseConfig = { // Your actual config starts here
+        // Firebase Configuration (YOUR PROJECT'S CONFIG)
+        // IMPORTANT: Replace these values with your actual Firebase project's config
+        const firebaseConfig = {
           apiKey: "AIzaSyDSXSY0b7HDAed5FQ7_lDk_8Ur8qVmVGTA",
           authDomain: "funky-ridesharing.firebaseapp.com",
           projectId: "funky-ridesharing",
@@ -490,698 +250,359 @@
           appId: "1:111384427298:web:fc012778b428bad5f8837b",
           measurementId: "G-FPC1MV8PJS"
         };
+        // The appId used for constructing Firestore paths
         const appId = firebaseConfig.appId;
 
+        // initialAuthToken is only provided in the Canvas environment, so it will be null on GitHub Pages.
+        // The app will then fall back to signInAnonymously().
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
 
-
         // Message Modal Functions
-
         const messageModal = document.getElementById('messageModal');
-
         const modalMessage = document.getElementById('modalMessage');
-
         const modalSpinner = document.getElementById('modalSpinner');
-
         const closeButton = document.querySelector('.close-button');
 
-
-
         function showMessage(message, isLoading = false) {
-
             modalMessage.textContent = message;
-
             if (isLoading) {
-
                 modalSpinner.classList.remove('hidden');
-
             } else {
-
                 modalSpinner.classList.add('hidden');
-
             }
-
             messageModal.style.display = 'flex'; // Use flex to center
-
         }
-
-
 
         function hideMessage() {
-
             modalMessage.textContent = ''; // Clear message when hiding
-
             modalSpinner.classList.add('hidden'); // Hide spinner
-
             messageModal.style.display = 'none';
-
         }
-
-
 
         closeButton.onclick = hideMessage;
-
         window.onclick = function(event) {
-
             if (event.target == messageModal) {
-
                 hideMessage();
-
             }
-
         }
-
-
 
         // Initialize Firebase and set up authentication
-
         async function initializeFirebase() {
-
             try {
-
                 app = initializeApp(firebaseConfig);
-
                 db = getFirestore(app);
-
                 auth = getAuth(app);
-
-
+                console.log("Firebase initialized. App ID:", appId); // Debugging log
 
                 // Listen for auth state changes
-
                 onAuthStateChanged(auth, async (user) => {
-
                     if (user) {
-
                         userId = user.uid;
-
                         console.log("Authenticated user ID:", userId);
-
                     } else {
-
                         // Sign in anonymously if no token or token fails
-
                         try {
-
                             if (initialAuthToken) {
-
                                 await signInWithCustomToken(auth, initialAuthToken);
-
                                 userId = auth.currentUser.uid;
-
                                 console.log("Signed in with custom token. User ID:", userId);
-
                             } else {
-
                                 await signInAnonymously(auth);
-
                                 userId = auth.currentUser.uid;
-
                                 console.log("Signed in anonymously. User ID:", userId);
-
                             }
-
                         } catch (error) {
-
                             console.error("Firebase Auth Error:", error);
-
                             // Fallback to a random ID if anonymous sign-in also fails
-
                             userId = crypto.randomUUID();
-
                             console.warn("Using random UUID as user ID due to auth failure:", userId);
-
                         }
-
                     }
-
                     document.getElementById('user-id-display').textContent = userId;
-
                     isAuthReady = true; // Set flag once auth is confirmed
-
+                    console.log("Auth state changed. isAuthReady:", isAuthReady, "userId:", userId); // Debugging log
                     setupFirestoreListeners(); // Setup listeners after auth is ready
-
                 });
-
             } catch (error) {
-
                 console.error("Failed to initialize Firebase:", error);
-
                 showMessage("Failed to initialize the app. Please try again later.", false);
-
                 userId = crypto.randomUUID(); // Fallback to random UUID
-
                 document.getElementById('user-id-display').textContent = userId;
-
                 isAuthReady = true;
-
                 setupFirestoreListeners(); // Still try to setup listeners, but data might be public
-
             }
-
         }
-
-
 
         // Function to get the correct collection path based on data type (public/private)
-
         function getCollectionPath(collectionName, isPublic = false) {
-
             if (isPublic) {
-
                 return `artifacts/${appId}/public/data/${collectionName}`;
-
             } else {
-
                 // Private data, associated with the user
-
                 return `artifacts/${appId}/users/${userId}/${collectionName}`;
-
             }
-
         }
-
-
 
         // Firestore Listeners
-
         function setupFirestoreListeners() {
-
+            console.log("Attempting to set up Firestore listeners. isAuthReady:", isAuthReady); // Debugging log
             if (!isAuthReady) {
-
                 console.warn("Firestore listeners not set up: Authentication not ready.");
-
                 return;
-
             }
-
-
 
             // Listen for ride requests
-
             const rideRequestsCol = collection(db, getCollectionPath('rideRequests', true)); // Public data
-
             onSnapshot(query(rideRequestsCol), (snapshot) => {
-
                 const requests = [];
-
                 snapshot.forEach(doc => {
-
                     requests.push({ id: doc.id, ...doc.data() });
-
                 });
-
                 displayRideRequests(requests);
-
             }, (error) => {
-
                 console.error("Error fetching ride requests:", error);
-
                 showMessage("Error loading ride requests. Please refresh.", false);
-
             });
-
-
 
             // Listen for ride offers
-
             const rideOffersCol = collection(db, getCollectionPath('rideOffers', true)); // Public data
-
             onSnapshot(query(rideOffersCol), (snapshot) => {
-
                 const offers = [];
-
                 snapshot.forEach(doc => {
-
                     offers.push({ id: doc.id, ...doc.data() });
-
                 });
-
                 displayRideOffers(offers);
-
             }, (error) => {
-
                 console.error("Error fetching ride offers:", error);
-
                 showMessage("Error loading ride offers. Please refresh.", false);
-
             });
-
         }
-
-
 
         // Display Functions
-
         function displayRideRequests(requests) {
-
             const listElement = document.getElementById('ride-requests-list');
-
             // Clear existing content except the main heading
-
             listElement.innerHTML = '<h3 class="text-xl font-semibold text-gray-700">People Needing Rides:</h3>';
-
             
-
             if (requests.length === 0) {
-
                 listElement.innerHTML += '<p class="text-gray-500" id="no-requests-message">No ride requests yet.</p>';
-
                 return;
-
             }
-
-
 
             // Sort requests by timestamp (most recent first)
-
             requests.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-
-
             requests.forEach(request => {
-
                 const requestCard = document.createElement('div');
-
                 requestCard.className = 'card space-y-2';
-
                 requestCard.innerHTML = `
-
                     <p><strong class="text-indigo-600">${escapeHTML(request.name)}</strong> (User ID: <span class="font-mono text-xs break-all">${escapeHTML(request.userId)}</span>)</p>
-
                     <p><strong>Fly In:</strong> ${request.flyInTime ? new Date(request.flyInTime).toLocaleString() : 'N/A'}</p>
-
                     <p><strong>Fly Out:</strong> ${request.flyOutTime ? new Date(request.flyOutTime).toLocaleString() : 'N/A'}</p>
-
                     ${request.userId === userId ? `
-
                         <div class="flex space-x-2 mt-2">
-
                             <button class="btn-secondary text-sm edit-request-btn" data-id="${escapeHTML(request.id)}">Edit</button>
-
                             <button class="btn-secondary text-sm delete-request-btn" data-id="${escapeHTML(request.id)}">Delete</button>
-
                         </div>
-
                     ` : ''}
-
                 `;
-
                 listElement.appendChild(requestCard);
-
             });
-
-
 
             // Add event listeners for edit/delete buttons
-
             listElement.querySelectorAll('.edit-request-btn').forEach(button => {
-
                 button.onclick = (e) => editRideRequest(e.target.dataset.id, requests);
-
             });
-
             listElement.querySelectorAll('.delete-request-btn').forEach(button => {
-
                 button.onclick = (e) => deleteRideRequest(e.target.dataset.id);
-
             });
-
         }
-
-
 
         function displayRideOffers(offers) {
-
             const listElement = document.getElementById('ride-offers-list');
-
             // Clear existing content except the main heading
-
             listElement.innerHTML = '<h3 class="text-xl font-semibold text-gray-700">Available Rides:</h3>';
-
             
-
             if (offers.length === 0) {
-
                 listElement.innerHTML += '<p class="text-gray-500" id="no-offers-message">No ride offers yet.</p>';
-
                 return;
-
             }
-
-
 
             // Sort offers by timestamp (most recent first)
-
             offers.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-
-
             offers.forEach(offer => {
-
                 const offerCard = document.createElement('div');
-
                 offerCard.className = 'card space-y-2';
-
                 offerCard.innerHTML = `
-
                     <p><strong class="text-indigo-600">${escapeHTML(offer.name)}</strong> (User ID: <span class="font-mono text-xs break-all">${escapeHTML(offer.userId)}</span>)</p>
-
                     <p><strong>Departure Time:</strong> ${offer.departureTime ? new Date(offer.departureTime).toLocaleString() : 'N/A'}</p>
-
                     ${offer.departureLocation ? `<p><strong>Departure Location:</strong> ${escapeHTML(offer.departureLocation)}</p>` : ''}
-
                     <p><strong>Seats Available:</strong> ${escapeHTML(offer.seatsAvailable)}</p>
-
                     <p><strong>Destination:</strong> ${escapeHTML(offer.destination)}</p>
-
                     ${offer.luggageCapacity ? `<p><strong>Luggage Capacity:</strong> ${escapeHTML(offer.luggageCapacity)}</p>` : ''}
-
                     ${offer.userId === userId ? `
-
                         <div class="flex space-x-2 mt-2">
-
                             <button class="btn-secondary text-sm edit-offer-btn" data-id="${escapeHTML(offer.id)}">Edit</button>
-
                             <button class="btn-secondary text-sm delete-offer-btn" data-id="${escapeHTML(offer.id)}">Delete</button>
-
                         </div>
-
                     ` : ''}
-
                 `;
-
                 listElement.appendChild(offerCard);
-
             });
-
-
 
             // Add event listeners for edit/delete buttons
-
             listElement.querySelectorAll('.edit-offer-btn').forEach(button => {
-
                 button.onclick = (e) => editRideOffer(e.target.dataset.id, offers);
-
             });
-
             listElement.querySelectorAll('.delete-offer-btn').forEach(button => {
-
                 button.onclick = (e) => deleteRideOffer(e.target.dataset.id);
-
             });
-
         }
-
-
 
         // Helper function to escape HTML for display
-
         function escapeHTML(str) {
-
             const div = document.createElement('div');
-
             div.appendChild(document.createTextNode(str));
-
             return div.innerHTML;
-
         }
-
-
 
         // Form Submission Handlers
-
         document.getElementById('my-ride-form').addEventListener('submit', async (e) => {
-
             e.preventDefault();
-
             if (!isAuthReady) {
-
                 showMessage("Authentication not ready. Please wait a moment.", false);
-
                 return;
-
             }
-
             showMessage("Saving ride details...", true);
 
-
-
             const formData = new FormData(e.target);
-
             const data = {
-
                 name: formData.get('myName'),
-
                 flyInTime: formData.get('flyInTime'),
-
                 flyOutTime: formData.get('flyOutTime'),
-
                 userId: userId, // Store the user ID with the data
-
                 timestamp: new Date().toISOString()
-
             };
 
-
-
             try {
-
                 // Use the user's ID as the document ID for their personal ride request
-
                 // This ensures each user can only have one "My Ride Details" entry that they can update
-
                 const docRef = doc(db, getCollectionPath('rideRequests', true), userId); // Public, but keyed by user ID
-
                 await setDoc(docRef, data);
-
                 showMessage("Your ride details have been saved!", false);
-
             } catch (error) {
-
                 console.error("Error saving ride details:", error);
-
                 showMessage("Error saving ride details. Please try again.", false);
-
             }
-
         });
-
-
 
         document.getElementById('offer-ride-form').addEventListener('submit', async (e) => {
-
             e.preventDefault();
-
             if (!isAuthReady) {
-
                 showMessage("Authentication not ready. Please wait a moment.", false);
-
                 return;
-
             }
-
             showMessage("Offering ride...", true);
 
-
-
             const formData = new FormData(e.target);
-
             const data = {
-
                 name: formData.get('offerName'),
-
                 departureTime: formData.get('departureTime'),
-
                 departureLocation: formData.get('departureLocation'),
-
                 seatsAvailable: parseInt(formData.get('seatsAvailable')),
-
                 destination: formData.get('destination'),
-
                 luggageCapacity: formData.get('luggageCapacity'),
-
                 userId: userId, // Store the user ID with the data
-
                 timestamp: new Date().toISOString()
-
             };
 
-
-
             try {
-
                 // For ride offers, let Firestore generate a unique ID
-
                 const offersCol = collection(db, getCollectionPath('rideOffers', true)); // Public data
-
                 await setDoc(doc(offersCol), data); // Use setDoc with no ID to generate one
-
                 e.target.reset(); // Clear form after submission
-
                 showMessage("Your ride offer has been posted!", false);
-
             } catch (error) {
-
                 console.error("Error offering ride:", error);
-
                 showMessage("Error offering ride. Please try again.", false);
-
             }
-
         });
-
-
 
         // Edit and Delete Functions
-
         async function deleteRideRequest(id) {
-
             if (!isAuthReady) { showMessage("Authentication not ready.", false); return; }
-
             showMessage("Deleting request...", true);
-
             try {
-
                 await deleteDoc(doc(db, getCollectionPath('rideRequests', true), id));
-
                 showMessage("Ride request deleted!", false);
-
             } catch (error) {
-
                 console.error("Error deleting ride request:", error);
-
                 showMessage("Error deleting ride request. Please try again.", false);
-
             }
-
         }
-
-
 
         async function deleteRideOffer(id) {
-
             if (!isAuthReady) { showMessage("Authentication not ready.", false); return; }
-
             showMessage("Deleting offer...", true);
-
             try {
-
                 await deleteDoc(doc(db, getCollectionPath('rideOffers', true), id));
-
                 showMessage("Ride offer deleted!", false);
-
             } catch (error) {
-
                 console.error("Error deleting ride offer:", error);
-
                 showMessage("Error deleting ride offer. Please try again.", false);
-
             }
-
         }
-
-
 
         function editRideRequest(id, requests) {
-
             const requestToEdit = requests.find(req => req.id === id);
-
             if (requestToEdit) {
-
                 // Populate the "My Ride Details" form with the existing data
-
                 document.getElementById('my-name').value = requestToEdit.name || '';
-
                 document.getElementById('fly-in-time').value = requestToEdit.flyInTime || '';
-
                 document.getElementById('fly-out-time').value = requestToEdit.flyOutTime || '';
 
-
-
                 // Switch to the "I Need a Ride" tab
-
                 document.getElementById('tab-my-ride').click();
-
                 showMessage("Editing your ride request. Make changes and save.", false);
-
             }
-
         }
-
-
 
         function editRideOffer(id, offers) {
-
             const offerToEdit = offers.find(off => off.id === id);
-
             if (offerToEdit) {
-
                 // Populate the "Offer a Ride" form with the existing data
-
                 document.getElementById('offer-name').value = offerToEdit.name || '';
-
                 document.getElementById('departure-time').value = offerToEdit.departureTime || '';
-
                 document.getElementById('departure-location').value = offerToEdit.departureLocation || '';
-
                 document.getElementById('seats-available').value = offerToEdit.seatsAvailable || 1;
-
                 document.getElementById('destination').value = offerToEdit.destination || '';
-
                 document.getElementById('luggage-capacity').value = offerToEdit.luggageCapacity || '';
 
-
-
                 // Switch to the "Offer a Ride" tab
-
                 document.getElementById('tab-offer-ride').click();
-
                 showMessage("Editing your ride offer. Make changes and submit.", false);
-
             }
-
         }
 
-
-
         // Tab Switching Logic
-
         const tabs = document.querySelectorAll('.tab-button');
-
         const contents = document.querySelectorAll('.tab-content');
 
-
-
         tabs.forEach(tab => {
-
             tab.addEventListener('click', () => {
-
                 tabs.forEach(item => item.classList.remove('active'));
-
                 tab.classList.add('active');
 
-
-
                 contents.forEach(content => content.classList.add('hidden'));
-
                 const targetId = tab.id.replace('tab-', 'content-');
-
                 document.getElementById(targetId).classList.remove('hidden');
-
             });
-
         });
 
-
-
         // Initialize Firebase on window load
-
         window.onload = initializeFirebase;
-
     </script>
-
 </body>
-
 </html>
