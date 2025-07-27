@@ -484,14 +484,6 @@
 
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDSXSY0b7HDAed5FQ7_lDk_8Ur8qVmVGTA",
   authDomain: "funky-ridesharing.firebaseapp.com",
@@ -501,10 +493,6 @@ const firebaseConfig = {
   appId: "1:111384427298:web:fc012778b428bad5f8837b",
   measurementId: "G-FPC1MV8PJS"
 };
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
