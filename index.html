@@ -7,601 +7,602 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2575.5">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Jade funky 30 - ridesharing&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS CDN --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Inter Font --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f0f2f5;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 90%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input[type="text"],</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input[type="datetime-local"],</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input[type="number"],</p>
-<p class="p1"><span class="Apple-converted-space">        </span>textarea {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.75rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #d1d5db;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: border-color 0.2s;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input[type="text"]:focus,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input[type="datetime-local"]:focus,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input[type="number"]:focus,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>textarea:focus {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-color: #6366f1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.2s, transform 0.1s;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-1px);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn-primary {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #6366f1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn-primary:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #4f46e5;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn-secondary {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #374151;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn-secondary:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #d1d5db;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab-button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #374151;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.2s;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab-button.active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #6366f1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f9fafb;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.modal {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1000;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(0,0,0,0.4);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.modal-content {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fefefe;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 80%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 500px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 5px 15px rgba(0,0,0,0.3);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.close-button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #aaa;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>float: right;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.close-button:hover,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.close-button:focus {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: black;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.loading-spinner {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 4px solid rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-left-color: #6366f1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: spin 1s linear infinite;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>vertical-align: middle;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-left: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes spin {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>0% { transform: rotate(0deg); }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>100% { transform: rotate(360deg); }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="bg-gray-100 p-4 sm:p-6 lg:p-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-3xl font-bold text-center mb-6 text-gray-800"&gt;Jade funky 30 - ridesharing&lt;/h1&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Tab Navigation --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex justify-center mb-6 space-x-4 flex-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="tab-my-ride" class="tab-button active mb-2 sm:mb-0"&gt;I Need a Ride&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="tab-offer-ride" class="tab-button mb-2 sm:mb-0"&gt;Offer a Ride&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="tab-ride-board" class="tab-button"&gt;Ride Board&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- I Need a Ride Tab Content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="content-my-ride" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-semibold mb-4 text-gray-700"&gt;I Need a Ride&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;form id="my-ride-form" class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="my-name" class="block text-sm font-medium text-gray-700 mb-1"&gt;Your Name/Nickname:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="my-name" name="myName" required class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="fly-in-time" class="block text-sm font-medium text-gray-700 mb-1"&gt;Fly In Time:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="datetime-local" id="fly-in-time" name="flyInTime" class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="fly-out-time" class="block text-sm font-medium text-gray-700 mb-1"&gt;Fly Out Time:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="datetime-local" id="fly-out-time" name="flyOutTime" class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="btn-primary w-full"&gt;Save My Ride Details&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Offer a Ride Tab Content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="content-offer-ride" class="tab-content hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-semibold mb-4 text-gray-700"&gt;Offer a Ride&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;form id="offer-ride-form" class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="offer-name" class="block text-sm font-medium text-gray-700 mb-1"&gt;Your Name/Nickname:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="offer-name" name="offerName" required class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="departure-time" class="block text-sm font-medium text-gray-700 mb-1"&gt;Departure Time:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="datetime-local" id="departure-time" name="departureTime" required class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="departure-location" class="block text-sm font-medium text-gray-700 mb-1"&gt;Departure Location:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="departure-location" name="departureLocation" placeholder="e.g., Barcelona City Center" class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="seats-available" class="block text-sm font-medium text-gray-700 mb-1"&gt;Number of Seats Available:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="seats-available" name="seatsAvailable" min="1" value="1" required class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="destination" class="block text-sm font-medium text-gray-700 mb-1"&gt;Destination (e.g., Festival Site, Airport):&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="destination" name="destination" required class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="luggage-capacity" class="block text-sm font-medium text-gray-700 mb-1"&gt;Luggage Capacity:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="luggage-capacity" name="luggageCapacity" placeholder="e.g., Medium (2 large bags)" class="block w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="btn-primary w-full"&gt;Offer Ride&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Ride Board Tab Content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="content-ride-board" class="tab-content hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-semibold mb-4 text-gray-700"&gt;Ride Board&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mb-4 text-sm text-gray-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Your User ID: &lt;span id="user-id-display" class="font-mono bg-gray-200 p-1 rounded text-xs break-all"&gt;Loading...&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="ride-requests-list" class="space-y-4 mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold text-gray-700"&gt;People Needing Rides:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p id="no-requests-message" class="text-gray-500"&gt;No ride requests yet.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="ride-offers-list" class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold text-gray-700"&gt;Available Rides:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p id="no-offers-message" class="text-gray-500"&gt;No ride offers yet.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Custom Modal for Messages --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="messageModal" class="modal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modal-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="close-button"&gt;&amp;times;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p id="modalMessage" class="text-lg text-gray-800"&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="modalSpinner" class="loading-spinner hidden mx-auto mt-4"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Firebase SDKs --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script type="module"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>import { getFirestore, doc, setDoc, collection, query, onSnapshot, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Global variables for Firebase</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let app;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let db;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let auth;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let userId = 'loading'; // Default loading state for userId</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let isAuthReady = false; // Flag to ensure auth is ready before Firestore operations</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Access __app_id and __firebase_config from the environment</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Message Modal Functions</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const messageModal = document.getElementById('messageModal');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const modalMessage = document.getElementById('modalMessage');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const modalSpinner = document.getElementById('modalSpinner');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const closeButton = document.querySelector('.close-button');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function showMessage(message, isLoading = false) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>modalMessage.textContent = message;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (isLoading) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>modalSpinner.classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>modalSpinner.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>messageModal.style.display = 'flex'; // Use flex to center</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function hideMessage() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>modalMessage.textContent = ''; // Clear message when hiding</p>
-<p class="p1"><span class="Apple-converted-space">            </span>modalSpinner.classList.add('hidden'); // Hide spinner</p>
-<p class="p1"><span class="Apple-converted-space">            </span>messageModal.style.display = 'none';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>closeButton.onclick = hideMessage;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>window.onclick = function(event) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (event.target == messageModal) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hideMessage();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Initialize Firebase and set up authentication</p>
-<p class="p1"><span class="Apple-converted-space">        </span>async function initializeFirebase() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>app = initializeApp(firebaseConfig);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>db = getFirestore(app);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>auth = getAuth(app);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Listen for auth state changes</p>
-<p class="p1"><span class="Apple-converted-space">                </span>onAuthStateChanged(auth, async (user) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>if (user) {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>userId = user.uid;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>console.log("Authenticated user ID:", userId);</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>// Sign in anonymously if no token or token fails</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>try {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>if (initialAuthToken) {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>await signInWithCustomToken(auth, initialAuthToken);</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>userId = auth.currentUser.uid;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>console.log("Signed in with custom token. User ID:", userId);</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>await signInAnonymously(auth);</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>userId = auth.currentUser.uid;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>console.log("Signed in anonymously. User ID:", userId);</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>} catch (error) {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>console.error("Firebase Auth Error:", error);</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>// Fallback to a random ID if anonymous sign-in also fails</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>userId = crypto.randomUUID();</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>console.warn("Using random UUID as user ID due to auth failure:", userId);</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('user-id-display').textContent = userId;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>isAuthReady = true; // Set flag once auth is confirmed</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>setupFirestoreListeners(); // Setup listeners after auth is ready</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.error("Failed to initialize Firebase:", error);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Failed to initialize the app. Please try again later.", false);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>userId = crypto.randomUUID(); // Fallback to random UUID</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('user-id-display').textContent = userId;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>isAuthReady = true;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>setupFirestoreListeners(); // Still try to setup listeners, but data might be public</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Function to get the correct collection path based on data type (public/private)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function getCollectionPath(collectionName, isPublic = false) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (isPublic) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return `artifacts/${appId}/public/data/${collectionName}`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Private data, associated with the user</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return `artifacts/${appId}/users/${userId}/${collectionName}`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Firestore Listeners</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function setupFirestoreListeners() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!isAuthReady) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.warn("Firestore listeners not set up: Authentication not ready.");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Listen for ride requests</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const rideRequestsCol = collection(db, getCollectionPath('rideRequests', true)); // Public data</p>
-<p class="p1"><span class="Apple-converted-space">            </span>onSnapshot(query(rideRequestsCol), (snapshot) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const requests = [];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>snapshot.forEach(doc =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>requests.push({ id: doc.id, ...doc.data() });</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">                </span>displayRideRequests(requests);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}, (error) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.error("Error fetching ride requests:", error);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Error loading ride requests. Please refresh.", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Listen for ride offers</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const rideOffersCol = collection(db, getCollectionPath('rideOffers', true)); // Public data</p>
-<p class="p1"><span class="Apple-converted-space">            </span>onSnapshot(query(rideOffersCol), (snapshot) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const offers = [];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>snapshot.forEach(doc =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>offers.push({ id: doc.id, ...doc.data() });</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">                </span>displayRideOffers(offers);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}, (error) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.error("Error fetching ride offers:", error);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Error loading ride offers. Please refresh.", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Display Functions</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function displayRideRequests(requests) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const listElement = document.getElementById('ride-requests-list');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Clear existing content except the main heading</p>
-<p class="p1"><span class="Apple-converted-space">            </span>listElement.innerHTML = '&lt;h3 class="text-xl font-semibold text-gray-700"&gt;People Needing Rides:&lt;/h3&gt;';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (requests.length === 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>listElement.innerHTML += '&lt;p class="text-gray-500" id="no-requests-message"&gt;No ride requests yet.&lt;/p&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Sort requests by timestamp (most recent first)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>requests.sort((a, b) =&gt; new Date(b.timestamp) - new Date(a.timestamp));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>requests.forEach(request =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const requestCard = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>requestCard.className = 'card space-y-2';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>requestCard.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong class="text-indigo-600"&gt;${escapeHTML(request.name)}&lt;/strong&gt; (User ID: &lt;span class="font-mono text-xs break-all"&gt;${escapeHTML(request.userId)}&lt;/span&gt;)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Fly In:&lt;/strong&gt; ${request.flyInTime ? new Date(request.flyInTime).toLocaleString() : 'N/A'}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Fly Out:&lt;/strong&gt; ${request.flyOutTime ? new Date(request.flyOutTime).toLocaleString() : 'N/A'}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>${request.userId === userId ? `</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex space-x-2 mt-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button class="btn-secondary text-sm edit-request-btn" data-id="${escapeHTML(request.id)}"&gt;Edit&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button class="btn-secondary text-sm delete-request-btn" data-id="${escapeHTML(request.id)}"&gt;Delete&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>` : ''}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>listElement.appendChild(requestCard);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Add event listeners for edit/delete buttons</p>
-<p class="p1"><span class="Apple-converted-space">            </span>listElement.querySelectorAll('.edit-request-btn').forEach(button =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.onclick = (e) =&gt; editRideRequest(e.target.dataset.id, requests);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>listElement.querySelectorAll('.delete-request-btn').forEach(button =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.onclick = (e) =&gt; deleteRideRequest(e.target.dataset.id);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function displayRideOffers(offers) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const listElement = document.getElementById('ride-offers-list');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Clear existing content except the main heading</p>
-<p class="p1"><span class="Apple-converted-space">            </span>listElement.innerHTML = '&lt;h3 class="text-xl font-semibold text-gray-700"&gt;Available Rides:&lt;/h3&gt;';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (offers.length === 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>listElement.innerHTML += '&lt;p class="text-gray-500" id="no-offers-message"&gt;No ride offers yet.&lt;/p&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Sort offers by timestamp (most recent first)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>offers.sort((a, b) =&gt; new Date(b.timestamp) - new Date(a.timestamp));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>offers.forEach(offer =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const offerCard = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>offerCard.className = 'card space-y-2';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>offerCard.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong class="text-indigo-600"&gt;${escapeHTML(offer.name)}&lt;/strong&gt; (User ID: &lt;span class="font-mono text-xs break-all"&gt;${escapeHTML(offer.userId)}&lt;/span&gt;)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Departure Time:&lt;/strong&gt; ${offer.departureTime ? new Date(offer.departureTime).toLocaleString() : 'N/A'}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>${offer.departureLocation ? `&lt;p&gt;&lt;strong&gt;Departure Location:&lt;/strong&gt; ${escapeHTML(offer.departureLocation)}&lt;/p&gt;` : ''}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Seats Available:&lt;/strong&gt; ${escapeHTML(offer.seatsAvailable)}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Destination:&lt;/strong&gt; ${escapeHTML(offer.destination)}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>${offer.luggageCapacity ? `&lt;p&gt;&lt;strong&gt;Luggage Capacity:&lt;/strong&gt; ${escapeHTML(offer.luggageCapacity)}&lt;/p&gt;` : ''}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>${offer.userId === userId ? `</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex space-x-2 mt-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button class="btn-secondary text-sm edit-offer-btn" data-id="${escapeHTML(offer.id)}"&gt;Edit&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button class="btn-secondary text-sm delete-offer-btn" data-id="${escapeHTML(offer.id)}"&gt;Delete&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>` : ''}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>listElement.appendChild(offerCard);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Add event listeners for edit/delete buttons</p>
-<p class="p1"><span class="Apple-converted-space">            </span>listElement.querySelectorAll('.edit-offer-btn').forEach(button =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.onclick = (e) =&gt; editRideOffer(e.target.dataset.id, offers);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>listElement.querySelectorAll('.delete-offer-btn').forEach(button =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.onclick = (e) =&gt; deleteRideOffer(e.target.dataset.id);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Helper function to escape HTML for display</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function escapeHTML(str) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const div = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>div.appendChild(document.createTextNode(str));</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return div.innerHTML;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Form Submission Handlers</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('my-ride-form').addEventListener('submit', async (e) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!isAuthReady) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Authentication not ready. Please wait a moment.", false);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showMessage("Saving ride details...", true);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const formData = new FormData(e.target);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const data = {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>name: formData.get('myName'),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>flyInTime: formData.get('flyInTime'),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>flyOutTime: formData.get('flyOutTime'),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>userId: userId, // Store the user ID with the data</p>
-<p class="p1"><span class="Apple-converted-space">                </span>timestamp: new Date().toISOString()</p>
-<p class="p1"><span class="Apple-converted-space">            </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Use the user's ID as the document ID for their personal ride request</p>
-<p class="p1"><span class="Apple-converted-space">                </span>// This ensures each user can only have one "My Ride Details" entry that they can update</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const docRef = doc(db, getCollectionPath('rideRequests', true), userId); // Public, but keyed by user ID</p>
-<p class="p1"><span class="Apple-converted-space">                </span>await setDoc(docRef, data);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Your ride details have been saved!", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.error("Error saving ride details:", error);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Error saving ride details. Please try again.", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('offer-ride-form').addEventListener('submit', async (e) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!isAuthReady) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Authentication not ready. Please wait a moment.", false);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showMessage("Offering ride...", true);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const formData = new FormData(e.target);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const data = {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>name: formData.get('offerName'),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>departureTime: formData.get('departureTime'),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>departureLocation: formData.get('departureLocation'),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>seatsAvailable: parseInt(formData.get('seatsAvailable')),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>destination: formData.get('destination'),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>luggageCapacity: formData.get('luggageCapacity'),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>userId: userId, // Store the user ID with the data</p>
-<p class="p1"><span class="Apple-converted-space">                </span>timestamp: new Date().toISOString()</p>
-<p class="p1"><span class="Apple-converted-space">            </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>// For ride offers, let Firestore generate a unique ID</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const offersCol = collection(db, getCollectionPath('rideOffers', true)); // Public data</p>
-<p class="p1"><span class="Apple-converted-space">                </span>await setDoc(doc(offersCol), data); // Use setDoc with no ID to generate one</p>
-<p class="p1"><span class="Apple-converted-space">                </span>e.target.reset(); // Clear form after submission</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Your ride offer has been posted!", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.error("Error offering ride:", error);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Error offering ride. Please try again.", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Edit and Delete Functions</p>
-<p class="p1"><span class="Apple-converted-space">        </span>async function deleteRideRequest(id) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!isAuthReady) { showMessage("Authentication not ready.", false); return; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showMessage("Deleting request...", true);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>await deleteDoc(doc(db, getCollectionPath('rideRequests', true), id));</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Ride request deleted!", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.error("Error deleting ride request:", error);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Error deleting ride request. Please try again.", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>async function deleteRideOffer(id) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!isAuthReady) { showMessage("Authentication not ready.", false); return; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showMessage("Deleting offer...", true);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>await deleteDoc(doc(db, getCollectionPath('rideOffers', true), id));</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Ride offer deleted!", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>console.error("Error deleting ride offer:", error);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Error deleting ride offer. Please try again.", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function editRideRequest(id, requests) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const requestToEdit = requests.find(req =&gt; req.id === id);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (requestToEdit) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Populate the "My Ride Details" form with the existing data</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('my-name').value = requestToEdit.name || '';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('fly-in-time').value = requestToEdit.flyInTime || '';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('fly-out-time').value = requestToEdit.flyOutTime || '';</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Switch to the "I Need a Ride" tab</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('tab-my-ride').click();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Editing your ride request. Make changes and save.", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function editRideOffer(id, offers) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const offerToEdit = offers.find(off =&gt; off.id === id);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (offerToEdit) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Populate the "Offer a Ride" form with the existing data</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('offer-name').value = offerToEdit.name || '';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('departure-time').value = offerToEdit.departureTime || '';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('departure-location').value = offerToEdit.departureLocation || '';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('seats-available').value = offerToEdit.seatsAvailable || 1;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('destination').value = offerToEdit.destination || '';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('luggage-capacity').value = offerToEdit.luggageCapacity || '';</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Switch to the "Offer a Ride" tab</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('tab-offer-ride').click();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showMessage("Editing your ride offer. Make changes and submit.", false);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Tab Switching Logic</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const tabs = document.querySelectorAll('.tab-button');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const contents = document.querySelectorAll('.tab-content');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>tabs.forEach(tab =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>tab.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>tabs.forEach(item =&gt; item.classList.remove('active'));</p>
-<p class="p1"><span class="Apple-converted-space">                </span>tab.classList.add('active');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>contents.forEach(content =&gt; content.classList.add('hidden'));</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const targetId = tab.id.replace('tab-', 'content-');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById(targetId).classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Initialize Firebase on window load</p>
-<p class="p1"><span class="Apple-converted-space">        </span>window.onload = initializeFirebase;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Jade funky 30 - ridesharing&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS CDN --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Inter Font --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f0f2f5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 90%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 2rem auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="text"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="datetime-local"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="number"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>textarea {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid #d1d5db;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: border-color 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="text"]:focus,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="datetime-local"]:focus,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="number"]:focus,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>textarea:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>outline: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-color: #6366f1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: background-color 0.2s, transform 0.1s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translateY(-1px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn-primary {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #6366f1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn-primary:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #4f46e5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn-secondary {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #e5e7eb;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #374151;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn-secondary:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #d1d5db;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.tab-button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #e5e7eb;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #374151;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: background-color 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.tab-button.active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #6366f1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f9fafb;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.modal {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>z-index: 1000;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overflow: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(0,0,0,0.4);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.modal-content {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #fefefe;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 80%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 500px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 5px 15px rgba(0,0,0,0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.close-button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #aaa;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>float: right;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.close-button:hover,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.close-button:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: black;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.loading-spinner {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 4px solid rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-left-color: #6366f1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>animation: spin 1s linear infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>vertical-align: middle;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-left: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes spin {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>0% { transform: rotate(0deg); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>100% { transform: rotate(360deg); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body class="bg-gray-100 p-4 sm:p-6 lg:p-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-3xl font-bold text-center mb-6 text-gray-800"&gt;Jade funky 30 - ridesharing&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Tab Navigation --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex justify-center mb-6 space-x-4 flex-wrap"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button id="tab-my-ride" class="tab-button active mb-2 sm:mb-0"&gt;I Need a Ride&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button id="tab-offer-ride" class="tab-button mb-2 sm:mb-0"&gt;Offer a Ride&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button id="tab-ride-board" class="tab-button"&gt;Ride Board&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- I Need a Ride Tab Content --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="content-my-ride" class="tab-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-semibold mb-4 text-gray-700"&gt;I Need a Ride&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;form id="my-ride-form" class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="my-name" class="block text-sm font-medium text-gray-700 mb-1"&gt;Your Name/Nickname:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="my-name" name="myName" required class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="fly-in-time" class="block text-sm font-medium text-gray-700 mb-1"&gt;Fly In Time:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="datetime-local" id="fly-in-time" name="flyInTime" class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="fly-out-time" class="block text-sm font-medium text-gray-700 mb-1"&gt;Fly Out Time:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="datetime-local" id="fly-out-time" name="flyOutTime" class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="btn-primary w-full"&gt;Save My Ride Details&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Offer a Ride Tab Content --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="content-offer-ride" class="tab-content hidden"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-semibold mb-4 text-gray-700"&gt;Offer a Ride&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;form id="offer-ride-form" class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="offer-name" class="block text-sm font-medium text-gray-700 mb-1"&gt;Your Name/Nickname:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="offer-name" name="offerName" required class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="departure-time" class="block text-sm font-medium text-gray-700 mb-1"&gt;Departure Time:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="datetime-local" id="departure-time" name="departureTime" required class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="departure-location" class="block text-sm font-medium text-gray-700 mb-1"&gt;Departure Location:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="departure-location" name="departureLocation" placeholder="e.g., Barcelona City Center" class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="seats-available" class="block text-sm font-medium text-gray-700 mb-1"&gt;Number of Seats Available:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="seats-available" name="seatsAvailable" min="1" value="1" required class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="destination" class="block text-sm font-medium text-gray-700 mb-1"&gt;Destination (e.g., Festival Site, Airport):&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="destination" name="destination" required class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="luggage-capacity" class="block text-sm font-medium text-gray-700 mb-1"&gt;Luggage Capacity:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="luggage-capacity" name="luggageCapacity" placeholder="e.g., Medium (2 large bags)" class="block w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="btn-primary w-full"&gt;Offer Ride&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Ride Board Tab Content --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="content-ride-board" class="tab-content hidden"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-semibold mb-4 text-gray-700"&gt;Ride Board&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="mb-4 text-sm text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Your User ID: &lt;span id="user-id-display" class="font-mono bg-gray-200 p-1 rounded text-xs break-all"&gt;Loading...&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="ride-requests-list" class="space-y-4 mb-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold text-gray-700"&gt;People Needing Rides:&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="no-requests-message" class="text-gray-500"&gt;No ride requests yet.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="ride-offers-list" class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold text-gray-700"&gt;Available Rides:&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="no-offers-message" class="text-gray-500"&gt;No ride offers yet.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Custom Modal for Messages --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="messageModal" class="modal"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="modal-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="close-button"&gt;&amp;times;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p id="modalMessage" class="text-lg text-gray-800"&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="modalSpinner" class="loading-spinner hidden mx-auto mt-4"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Firebase SDKs --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script type="module"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>import { getFirestore, doc, setDoc, collection, query, onSnapshot, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Global variables for Firebase</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let app;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let db;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let auth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let userId = 'loading'; // Default loading state for userId</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let isAuthReady = false; // Flag to ensure auth is ready before Firestore operations</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Access __app_id and __firebase_config from the environment</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Message Modal Functions</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const messageModal = document.getElementById('messageModal');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const modalMessage = document.getElementById('modalMessage');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const modalSpinner = document.getElementById('modalSpinner');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const closeButton = document.querySelector('.close-button');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function showMessage(message, isLoading = false) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>modalMessage.textContent = message;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (isLoading) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>modalSpinner.classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>modalSpinner.classList.add('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>messageModal.style.display = 'flex'; // Use flex to center</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function hideMessage() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>modalMessage.textContent = ''; // Clear message when hiding</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>modalSpinner.classList.add('hidden'); // Hide spinner</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>messageModal.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>closeButton.onclick = hideMessage;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.onclick = function(event) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (event.target == messageModal) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hideMessage();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Initialize Firebase and set up authentication</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function initializeFirebase() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>app = initializeApp(firebaseConfig);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>db = getFirestore(app);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>auth = getAuth(app);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Listen for auth state changes</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>onAuthStateChanged(auth, async (user) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (user) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>userId = user.uid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>console.log("Authenticated user ID:", userId);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// Sign in anonymously if no token or token fails</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>if (initialAuthToken) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>await signInWithCustomToken(auth, initialAuthToken);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>userId = auth.currentUser.uid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>console.log("Signed in with custom token. User ID:", userId);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>await signInAnonymously(auth);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>userId = auth.currentUser.uid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>console.log("Signed in anonymously. User ID:", userId);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>console.error("Firebase Auth Error:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>// Fallback to a random ID if anonymous sign-in also fails</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>userId = crypto.randomUUID();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>console.warn("Using random UUID as user ID due to auth failure:", userId);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>document.getElementById('user-id-display').textContent = userId;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>isAuthReady = true; // Set flag once auth is confirmed</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>setupFirestoreListeners(); // Setup listeners after auth is ready</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Failed to initialize Firebase:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Failed to initialize the app. Please try again later.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>userId = crypto.randomUUID(); // Fallback to random UUID</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('user-id-display').textContent = userId;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>isAuthReady = true;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>setupFirestoreListeners(); // Still try to setup listeners, but data might be public</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Function to get the correct collection path based on data type (public/private)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function getCollectionPath(collectionName, isPublic = false) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (isPublic) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return `artifacts/${appId}/public/data/${collectionName}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Private data, associated with the user</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return `artifacts/${appId}/users/${userId}/${collectionName}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Firestore Listeners</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function setupFirestoreListeners() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!isAuthReady) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.warn("Firestore listeners not set up: Authentication not ready.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Listen for ride requests</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const rideRequestsCol = collection(db, getCollectionPath('rideRequests', true)); // Public data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>onSnapshot(query(rideRequestsCol), (snapshot) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const requests = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>snapshot.forEach(doc =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>requests.push({ id: doc.id, ...doc.data() });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>displayRideRequests(requests);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}, (error) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Error fetching ride requests:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Error loading ride requests. Please refresh.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Listen for ride offers</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const rideOffersCol = collection(db, getCollectionPath('rideOffers', true)); // Public data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>onSnapshot(query(rideOffersCol), (snapshot) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const offers = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>snapshot.forEach(doc =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>offers.push({ id: doc.id, ...doc.data() });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>displayRideOffers(offers);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}, (error) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Error fetching ride offers:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Error loading ride offers. Please refresh.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Display Functions</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function displayRideRequests(requests) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const listElement = document.getElementById('ride-requests-list');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Clear existing content except the main heading</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>listElement.innerHTML = '&lt;h3 class="text-xl font-semibold text-gray-700"&gt;People Needing Rides:&lt;/h3&gt;';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (requests.length === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>listElement.innerHTML += '&lt;p class="text-gray-500" id="no-requests-message"&gt;No ride requests yet.&lt;/p&gt;';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Sort requests by timestamp (most recent first)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>requests.sort((a, b) =&gt; new Date(b.timestamp) - new Date(a.timestamp));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>requests.forEach(request =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const requestCard = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>requestCard.className = 'card space-y-2';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>requestCard.innerHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong class="text-indigo-600"&gt;${escapeHTML(request.name)}&lt;/strong&gt; (User ID: &lt;span class="font-mono text-xs break-all"&gt;${escapeHTML(request.userId)}&lt;/span&gt;)&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Fly In:&lt;/strong&gt; ${request.flyInTime ? new Date(request.flyInTime).toLocaleString() : 'N/A'}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Fly Out:&lt;/strong&gt; ${request.flyOutTime ? new Date(request.flyOutTime).toLocaleString() : 'N/A'}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>${request.userId === userId ? `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="flex space-x-2 mt-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;button class="btn-secondary text-sm edit-request-btn" data-id="${escapeHTML(request.id)}"&gt;Edit&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;button class="btn-secondary text-sm delete-request-btn" data-id="${escapeHTML(request.id)}"&gt;Delete&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>` : ''}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>listElement.appendChild(requestCard);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Add event listeners for edit/delete buttons</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>listElement.querySelectorAll('.edit-request-btn').forEach(button =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.onclick = (e) =&gt; editRideRequest(e.target.dataset.id, requests);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>listElement.querySelectorAll('.delete-request-btn').forEach(button =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.onclick = (e) =&gt; deleteRideRequest(e.target.dataset.id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function displayRideOffers(offers) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const listElement = document.getElementById('ride-offers-list');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Clear existing content except the main heading</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>listElement.innerHTML = '&lt;h3 class="text-xl font-semibold text-gray-700"&gt;Available Rides:&lt;/h3&gt;';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (offers.length === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>listElement.innerHTML += '&lt;p class="text-gray-500" id="no-offers-message"&gt;No ride offers yet.&lt;/p&gt;';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Sort offers by timestamp (most recent first)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>offers.sort((a, b) =&gt; new Date(b.timestamp) - new Date(a.timestamp));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>offers.forEach(offer =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const offerCard = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>offerCard.className = 'card space-y-2';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>offerCard.innerHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong class="text-indigo-600"&gt;${escapeHTML(offer.name)}&lt;/strong&gt; (User ID: &lt;span class="font-mono text-xs break-all"&gt;${escapeHTML(offer.userId)}&lt;/span&gt;)&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Departure Time:&lt;/strong&gt; ${offer.departureTime ? new Date(offer.departureTime).toLocaleString() : 'N/A'}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>${offer.departureLocation ? `&lt;p&gt;&lt;strong&gt;Departure Location:&lt;/strong&gt; ${escapeHTML(offer.departureLocation)}&lt;/p&gt;` : ''}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Seats Available:&lt;/strong&gt; ${escapeHTML(offer.seatsAvailable)}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Destination:&lt;/strong&gt; ${escapeHTML(offer.destination)}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>${offer.luggageCapacity ? `&lt;p&gt;&lt;strong&gt;Luggage Capacity:&lt;/strong&gt; ${escapeHTML(offer.luggageCapacity)}&lt;/p&gt;` : ''}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>${offer.userId === userId ? `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="flex space-x-2 mt-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;button class="btn-secondary text-sm edit-offer-btn" data-id="${escapeHTML(offer.id)}"&gt;Edit&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;button class="btn-secondary text-sm delete-offer-btn" data-id="${escapeHTML(offer.id)}"&gt;Delete&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>` : ''}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>listElement.appendChild(offerCard);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Add event listeners for edit/delete buttons</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>listElement.querySelectorAll('.edit-offer-btn').forEach(button =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.onclick = (e) =&gt; editRideOffer(e.target.dataset.id, offers);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>listElement.querySelectorAll('.delete-offer-btn').forEach(button =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.onclick = (e) =&gt; deleteRideOffer(e.target.dataset.id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Helper function to escape HTML for display</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function escapeHTML(str) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const div = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>div.appendChild(document.createTextNode(str));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>return div.innerHTML;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Form Submission Handlers</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('my-ride-form').addEventListener('submit', async (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!isAuthReady) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Authentication not ready. Please wait a moment.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage("Saving ride details...", true);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const formData = new FormData(e.target);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const data = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>name: formData.get('myName'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>flyInTime: formData.get('flyInTime'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>flyOutTime: formData.get('flyOutTime'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>userId: userId, // Store the user ID with the data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>timestamp: new Date().toISOString()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Use the user's ID as the document ID for their personal ride request</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// This ensures each user can only have one "My Ride Details" entry that they can update</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const docRef = doc(db, getCollectionPath('rideRequests', true), userId); // Public, but keyed by user ID</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>await setDoc(docRef, data);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Your ride details have been saved!", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Error saving ride details:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Error saving ride details. Please try again.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('offer-ride-form').addEventListener('submit', async (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!isAuthReady) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Authentication not ready. Please wait a moment.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage("Offering ride...", true);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const formData = new FormData(e.target);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const data = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>name: formData.get('offerName'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>departureTime: formData.get('departureTime'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>departureLocation: formData.get('departureLocation'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>seatsAvailable: parseInt(formData.get('seatsAvailable')),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>destination: formData.get('destination'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>luggageCapacity: formData.get('luggageCapacity'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>userId: userId, // Store the user ID with the data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>timestamp: new Date().toISOString()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// For ride offers, let Firestore generate a unique ID</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const offersCol = collection(db, getCollectionPath('rideOffers', true)); // Public data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>await setDoc(doc(offersCol), data); // Use setDoc with no ID to generate one</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>e.target.reset(); // Clear form after submission</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Your ride offer has been posted!", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Error offering ride:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Error offering ride. Please try again.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Edit and Delete Functions</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function deleteRideRequest(id) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!isAuthReady) { showMessage("Authentication not ready.", false); return; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage("Deleting request...", true);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>await deleteDoc(doc(db, getCollectionPath('rideRequests', true), id));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Ride request deleted!", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Error deleting ride request:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Error deleting ride request. Please try again.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function deleteRideOffer(id) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!isAuthReady) { showMessage("Authentication not ready.", false); return; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage("Deleting offer...", true);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>await deleteDoc(doc(db, getCollectionPath('rideOffers', true), id));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Ride offer deleted!", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Error deleting ride offer:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Error deleting ride offer. Please try again.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function editRideRequest(id, requests) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const requestToEdit = requests.find(req =&gt; req.id === id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (requestToEdit) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Populate the "My Ride Details" form with the existing data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('my-name').value = requestToEdit.name || '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('fly-in-time').value = requestToEdit.flyInTime || '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('fly-out-time').value = requestToEdit.flyOutTime || '';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Switch to the "I Need a Ride" tab</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('tab-my-ride').click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Editing your ride request. Make changes and save.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function editRideOffer(id, offers) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const offerToEdit = offers.find(off =&gt; off.id === id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (offerToEdit) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Populate the "Offer a Ride" form with the existing data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('offer-name').value = offerToEdit.name || '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('departure-time').value = offerToEdit.departureTime || '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('departure-location').value = offerToEdit.departureLocation || '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('seats-available').value = offerToEdit.seatsAvailable || 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('destination').value = offerToEdit.destination || '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('luggage-capacity').value = offerToEdit.luggageCapacity || '';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Switch to the "Offer a Ride" tab</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('tab-offer-ride').click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage("Editing your ride offer. Make changes and submit.", false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Tab Switching Logic</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const tabs = document.querySelectorAll('.tab-button');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const contents = document.querySelectorAll('.tab-content');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>tabs.forEach(tab =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>tab.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>tabs.forEach(item =&gt; item.classList.remove('active'));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>tab.classList.add('active');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>contents.forEach(content =&gt; content.classList.add('hidden'));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const targetId = tab.id.replace('tab-', 'content-');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById(targetId).classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Initialize Firebase on window load</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.onload = initializeFirebase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
 </html>
