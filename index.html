@@ -481,18 +481,16 @@
 
 
         // Access __app_id and __firebase_config from the environment
-
-        cconst appId = firebaseConfig.appId; //
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDSXSY0b7HDAed5FQ7_lDk_8Ur8qVmVGTA",
-  authDomain: "funky-ridesharing.firebaseapp.com",
-  projectId: "funky-ridesharing",
-  storageBucket: "funky-ridesharing.firebasestorage.app",
-  messagingSenderId: "111384427298",
-  appId: "1:111384427298:web:fc012778b428bad5f8837b",
-  measurementId: "G-FPC1MV8PJS"
-};
+        const firebaseConfig = { // Your actual config starts here
+          apiKey: "AIzaSyDSXSY0b7HDAed5FQ7_lDk_8Ur8qVmVGTA",
+          authDomain: "funky-ridesharing.firebaseapp.com",
+          projectId: "funky-ridesharing",
+          storageBucket: "funky-ridesharing.firebasestorage.app",
+          messagingSenderId: "111384427298",
+          appId: "1:111384427298:web:fc012778b428bad5f8837b",
+          measurementId: "G-FPC1MV8PJS"
+        };
+        const appId = firebaseConfig.appId;
 
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
